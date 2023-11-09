@@ -1,24 +1,29 @@
 <?php
-// Function to generate Fibonacci sequence using a loop
-function generateFibonacci($n) {
-    $fibonacciSequence = array();
-    $fibonacciSequence[0] = 0;
-    $fibonacciSequence[1] = 1;
-    
-    for ($i = 2; $i < $n; $i++) {
-        $fibonacciSequence[$i] = $fibonacciSequence[$i - 1] + $fibonacciSequence[$i - 2];
+// PHP program to generate Fibonacci sequence
+
+// Function to generate Fibonacci sequence up to a given count
+function generateFibonacci($count) {
+    // Initialize an array to store Fibonacci numbers
+    $fibonacciSequence = [0, 1];
+
+    // Generate Fibonacci sequence using a loop
+    for ($i = 2; $i < $count; $i++) {
+        // Calculate the next Fibonacci number and add it to the array
+        $nextFibonacci = $fibonacciSequence[$i - 1] + $fibonacciSequence[$i - 2];
+        $fibonacciSequence[] = $nextFibonacci;
     }
-    
+
+    // Return the generated Fibonacci sequence
     return $fibonacciSequence;
 }
 
 // Number of Fibonacci numbers to generate
-$n = 10;
+$fibonacciCount = 10;
 
-// Generate Fibonacci sequence
-$fibonacciSequence = generateFibonacci($n);
+// Call the function to generate Fibonacci sequence
+$fibonacciResult = generateFibonacci($fibonacciCount);
 
-// Output the Fibonacci sequence
-echo "Fibonacci Sequence (using loop): " . implode(", ", $fibonacciSequence);
+// Print the generated Fibonacci sequence
+echo "Fibonacci Sequence: " . implode(", ", $fibonacciResult);
 ?>
 
