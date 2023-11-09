@@ -1,17 +1,24 @@
 <?php
-// Function to calculate factorial using a loop
-function factorial($number) {
-    $result = 1;
-    for ($i = 1; $i <= $number; $i++) {
-        $result *= $i;
+// PHP program to calculate factorial of a number
+
+// Function to calculate factorial of a number
+function calculateFactorial($number) {
+    // Base case: factorial of 0 or 1 is 1
+    if ($number <= 1) {
+        return 1;
+    } else {
+        // Recursive call to calculate factorial
+        return $number * calculateFactorial($number - 1);
     }
-    return $result;
 }
 
 // Number for which factorial needs to be calculated
-$number = 5;
+$factorialNumber = 5;
 
-// Calculate and output the factorial
-echo "Factorial of $number is: " . factorial($number);
+// Call the function to calculate factorial
+$factorialResult = calculateFactorial($factorialNumber);
+
+// Print the calculated factorial
+echo "Factorial of $factorialNumber is: " . $factorialResult;
 ?>
 
