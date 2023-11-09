@@ -1,26 +1,19 @@
 <?php
 // PHP program to swap two numbers
 
-// Function to swap two numbers using a temporary variable
-function swapNumbers(&$num1, &$num2) {
-    $temp = $num1;
-    $num1 = $num2;
-    $num2 = $temp;
-}
+// Define variables to store the numbers
+$firstNumber = 5;
+$secondNumber = 10;
 
-// Example usage
-$num1 = 5;
-$num2 = 10;
+// Print original numbers
+echo "Before swapping: First Number: " . $firstNumber . ", Second Number: " . $secondNumber . "<br>";
 
-echo "Before swapping: ";
-echo "Number 1: " . $num1 . " ";
-echo "Number 2: " . $num2 . " ";
+// Swap the numbers using a temporary variable
+$temporaryNumber = $firstNumber;
+$firstNumber = $secondNumber;
+$secondNumber = $temporaryNumber;
 
-// Call the function to swap numbers
-swapNumbers($num1, $num2);
-
-echo "After swapping: ";
-echo "Number 1: " . $num1 . " ";
-echo "Number 2: " . $num2 . " ";
+// Print swapped numbers
+echo "After swapping: First Number: " . $firstNumber . ", Second Number: " . $secondNumber;
 ?>
 
