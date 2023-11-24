@@ -1,5 +1,6 @@
 <?php
 // Song.php
+namespace songs;
 
 class Song {
     // Properties
