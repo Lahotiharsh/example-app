@@ -8,4 +8,8 @@ Route::get('/veggies/{veggiesName}', function (string $veggiesName) {
     return $veggiesName;
 })->whereIn('veggiesName', ['aaloo','bhindi','gobhi','baigan']);
 
+Route::get ('/veggies',function (){
+    return view('veggies');
+});
+
 
