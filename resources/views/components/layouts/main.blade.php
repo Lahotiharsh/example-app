@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist Viewer</title>
+    <title>{{ $title ?? "Cool Web App" }}</title>
     <link href="{{ asset('css/layouts/main.css') }}" rel="stylesheet" />
 </head>
 <body>
@@ -22,32 +22,41 @@
 </sidebar>
 
 <main>
-    <table>
-        <thead>
+//@yield('content')
+<table>
+      <thead>
         <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Artists</th>
-            <th>Album</th>
-            <th>Duration</th>
+          <th>Serial No</th>
+          <th>Song Title</th>
+          <th>Artist Name</th>
+          <th>Album Name</th>
+          <th>Duration</th>
         </tr>
-        </thead>
-        <tbody>
+      </thead>
+      <tbody>
         <tr>
-            <td>1</td>
-            <td>Song 1</td>
-            <td>Artist 1</td>
-            <td>Album 1</td>
-            <td>3:30</td>
+          <td>1</td>
+          <td>Song Title 1</td>
+          <td>Artist 1</td>
+          <td>Album 1</td>
+          <td>3:45</td>
         </tr>
         <tr>
-            <td>2</td>
-            <td>Song 2</td>
-            <td>Artist 2</td>
-            <td>Album 2</td>
-            <td>4:15</td>
+          <td>2</td>
+          <td>Song Title 2</td>
+          <td>Artist 2</td>
+          <td>Album 2</td>
+          <td>3:45</td>
         </tr>
-        </tbody>
+        <tr>
+          <td>3</td>
+          <td>Song Title 3</td>
+          <td>Artist 3</td>
+          <td>Album 3</td>
+          <td>3:45</td>
+        </tr>
+        <!-- Add more rows for songs -->
+      </tbody>
     </table>
 </main>
 
