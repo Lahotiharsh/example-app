@@ -12,6 +12,7 @@ Route::get('/veggies/{veggiesName}', function (string $veggiesName) {
 Route::get ('/veggies',function (){
     return view('veggies');
 });
+
 Route::get('/songs_static', function () {
     return view('songs_static');
 });
