@@ -6,9 +6,9 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 require(__DIR__.'/../../practicals/Song.php');
-use songs\Song;
+use Practicals\Song;
 
-class SongsTest extends TestCase
+class SongTest extends TestCase
 {
     public function testSetTempo(): void
     {
