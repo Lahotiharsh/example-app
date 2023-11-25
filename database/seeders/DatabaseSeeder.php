@@ -12,7 +12,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        use App\Models\Song;
+
+        /**
+         * Run the database seeds.
+         */
+        public function run(): void
+        {
+    
+            // Seed a few songs
+            Song::create([
+                'artist' => 'Eminem',
+                'title' => 'Stan',
+            ]);
+    
+            Song::create([
+                'artist' => 'A P Dhillon',
+                'title' => 'With You',
+            ]);
+    
+        } // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
